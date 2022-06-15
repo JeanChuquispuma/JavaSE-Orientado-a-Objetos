@@ -53,4 +53,10 @@ public class User {
             System.out.println("El número telefonico deber ser 8 dígitos");
         }
     }
+
+    @Override
+    public String toString(){
+        return "User: " + name + ", Email: " + email +
+                "\nAddress: " + address + ". Phone: " + phoneNumber;
+    }
 }
