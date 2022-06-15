@@ -7,5 +7,7 @@ public class Main {
 
         Doctor myDoctor = new Doctor("Jean Chuquispuma","Traumatología");
 
+        Patient patient = new Patient("Alejandra","alejandra@gmail.com");
+
     }
 }
