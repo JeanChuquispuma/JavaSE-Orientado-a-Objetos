@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Doctor {
     //Atributos
     static int id = 0; //Autoincrement
-    String name;
-    String speciality;
+    private String name;
+    private String email;
+    private String speciality;
 
     Doctor(){
         System.out.println("Construyendo el Objeto Doctor ...");
@@ -20,5 +24,48 @@ public class Doctor {
     }
     public void showId(){
         System.out.println("ID Doctor:" + id);
+    }
+
+    ArrayList<AvaibleAppointment> avaibleAppointments = new ArrayList<>();
+    public void addAvaibleAppointment(Date date, String time){
+        avaibleAppointments.add(new Doctor.AvaibleAppointment(date, time));
+    }
+
+    public ArrayList<AvaibleAppointment> getAvaibleAppointments(){
+        return avaibleAppointments;
+    }
+    public static class AvaibleAppointment{
+        private int id;
+        private Date date;
+        private String time;
+
+        public AvaibleAppointment(Date date, String time){
+            this.date = date;
+            this.time =  time;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public Date getDate() {
+            return date;
+        }
+
+        public void setDate(Date date) {
+            this.date = date;
+        }
+
+        public String getTime() {
+            return time;
+        }
+
+        public void setTime(String time) {
+            this.time = time;
+        }
     }
 }
