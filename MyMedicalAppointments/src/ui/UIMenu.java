@@ -67,6 +67,7 @@ public class UIMenu {
                         //Obtener el usuario logeado
                         doctorLogged = d;
                         //showDoctor Menu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
@@ -77,7 +78,8 @@ public class UIMenu {
                     if (p.getEmail().equals(email)){
                         emailCorrect = true;
                         patientLogged = p;
-                        //showPainted Menu
+
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
